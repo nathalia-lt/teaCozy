@@ -5,31 +5,30 @@
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
+    font-family: Helvetica, sans-serif;
+    font-size: 22px;
     color: seashell;
     background-color: black;
     text-align: center;
+    opacity:0.9;
 }
 
-h1, h2, h3, h5, p{
+h1, h2, h3, h4, h5, p, a, div, section{
     color: seashell;
+    opacity: 0.9;
 }
 
 
 .headerContainer{
+    min-height: 69px;
+    width: 100%;
     display: flex;
-    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     border-bottom: 1px solid seashell;
-}
-
-.header{
-    height: 69px;
-    width: 100%;
     position: fixed;
-    align-items: center;
-    z-index: 1;
+    z-index: 2;
+    background-color: black;
 }
 
 nav{
@@ -37,22 +36,18 @@ nav{
     flex-grow: 1;
 }
 
-nav h3{
+nav a{
     display: inline-block;
-    padding: 20px 10px;
-    
+    padding: 10px 10px 10px 15px;
+    font-weight: 500;
 }
 
 .imgLogo{
+    margin: 8px 0;
     height: 50px;
-    margin-top: 5px;
     margin-left: 10px;
-    
 }
 
-h3{
-    text-decoration: underline;
-}
 
 /* Main */
 /* Mission */
@@ -64,28 +59,36 @@ h3{
 
 section.missionContainer{
     width: 100%;
-    height: 700px;
     opacity: 0.9;
     display: flex;
-    flex-direction: column;
-    align-content: center;
-    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 70px;
 }
 
 
 .missionContent{
-    background-image: url('./resources/img-mission-background.jpg');
-    width: 1200px;
+    background-image: url(./resources/img-mission-background.jpg);
+    width: 100%;
+    max-width: 1200px;
     height: 700px;
     opacity: 0.9;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .ourMission{
-    margin-top: 20%;
     background-color: black;
     padding: 8px;
     line-height: 1.5;
     opacity: 0.9;
+    width: 100%;
+
 }
 
 h2, h4{
@@ -104,9 +107,7 @@ h2, h4{
 
 .teaMonthContainer{
     width: 1000px;
-    height: 700px;
     margin: auto;
-    
 }
 
 .teaContainer{
@@ -122,10 +123,14 @@ h2, h4{
 }
 
 .teaPic{
-    width: 300px;
-    height: 200px;
-    margin-bottom: 10px;
-    margin-top: 20px;
+    max-width: 300px;
+    max-height: 200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+figcaption {
+    margin-top: 10px;
 }
 
 .item{
@@ -137,46 +142,44 @@ h2, h4{
 .locationSection{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    margin-top: 80px;
 }
 
 
-#locations{
+.locationsContent{
     background-image: url(./resources/img-locations-background.webp);
-    padding-top: 40px;
-    padding-bottom: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 500px;
+    opacity: 0.9;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.teaMonthTitle{
-    margin-top: 30px;
-    margin-bottom: 30px;
+.locationTitle{
+    margin-top: 50px;
+    margin-bottom: 15px;
     line-height: 1.5;
-}
-
-#headerLocation {
     text-align: center;
-    color: black;
-    border: 3px solid red;
+    color: seaShell;
 }
 
 .locationsContainer{
-    height: 500px;
-    margin: auto;
+    margin-bottom: 20px;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
+    gap: 20px 40px;
 }
 
 .location{
     width: 300px;
-    height: 280px;
     background-color: black;
     border-radius: 5px;
-    margin: 5px 25px;
-    padding: 30px;
+    margin-bottom: 20px;
+    padding: 30px 0;
+    opacity: 1;
 }
 
 p{
@@ -188,27 +191,29 @@ p{
 
 /* Footer */
 
-.footerContainer{
+.footerContent{
+    padding: 10px;
     height: 200px;
     width: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .footerTitle{
     padding-bottom: 10px;
-    padding-top: 30px;
+    flex-grow:1;
 }
 
 h5{
     padding-top: 5px;
     padding-bottom: 20px;
+    font-weight: 500;
 }
 
 .copyright{
     text-align: left;
     padding-left: 20px;
 }
-
